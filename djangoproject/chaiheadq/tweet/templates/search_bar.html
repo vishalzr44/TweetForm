@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Searching Bar
+{% endblock %}
+    
+
+{% block content %}
+ <center>
+{% if q %}
+<h1> You Searched For {{ q }}</h1>
+ <br/>
+ {% for Tweet in tweetss %}
+  {{Tweet}} - {{Tweet.user}}
+
+   <br/>
+ {% endfor %}
+{% else %}
+ <h1> Hey! You Forgot To Search For A Tweet</h1>
+
+{% endif %}
+
+
+
+
+
+</center>
+{% endblock  %}
+    
